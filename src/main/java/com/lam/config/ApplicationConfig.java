@@ -14,7 +14,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import javax.sql.DataSource;
 
 @Configuration
-@EnableJpaRepositories(basePackages = "com.lam.repository")
+@EnableJpaRepositories(basePackages = "com.lam.data.repository")
 @EnableTransactionManagement
 public class ApplicationConfig {
 
@@ -39,7 +39,7 @@ public class ApplicationConfig {
 
         LocalContainerEntityManagerFactoryBean factory = new LocalContainerEntityManagerFactoryBean();
         factory.setJpaVendorAdapter(vendorAdapter);
-        factory.setPackagesToScan("com.lam.pojo");
+        factory.setPackagesToScan("com.lam.data.pojo");
         factory.setDataSource(dataSource());
         return factory;
     }

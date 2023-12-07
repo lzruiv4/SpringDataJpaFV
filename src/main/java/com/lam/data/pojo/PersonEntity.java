@@ -1,4 +1,4 @@
-package com.lam.pojo;
+package com.lam.data.pojo;
 
 
 import jakarta.persistence.*;
@@ -9,7 +9,7 @@ import java.util.UUID;
 @Entity
 @Data
 @Table(name = "persons")
-public class Person {
+public class PersonEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "pId")
